@@ -4,6 +4,7 @@ let previousScrollPosition = 0;
 
 function loadImage(divImgID, imgSrc){
     var img = new Image();
+    img.src = imgSrc;
     img.onload = function(){
         console.log("Height: " + this.height);
         var divImg = document.getElementById(divImgID);
@@ -11,7 +12,12 @@ function loadImage(divImgID, imgSrc){
         divImg.style.opacity = 1;
     }
     
-    img.src = imgSrc;
+    var imgBackUp = new Image();
+    imgBackUp.src = "img/background-nyc.jpg";
+    imgBackUp.onload = function(){
+      //var divImg = document.getElementById(divImgID);
+      //divImg.style.backgroundImage = "url(" + imgSrc + ")";
+    }
 }
 
 function handleIndicator() {

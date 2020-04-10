@@ -75,6 +75,7 @@ body{
    animation: appear 2s;
    -webkit-animation-fill-mode: forwards;
    animation-fill-mode: forwards;
+   transition: background-image 1s ease-in-out;
 }
 
 .overlay{
@@ -434,8 +435,10 @@ body{
 .project-inner{
     width: 100%;
     height: 100%;
-    background-image: url("../img/project.jpeg");
+    background-image: url("../img/Coin_1.png");
     transition: all 500ms ease-in-out;
+    background-position: center;
+    background-size: cover;
 }
 
 .overlay-project{
@@ -541,6 +544,10 @@ body{
         display: none;
     }
 
+    #background-image{
+        background-image: url("../img/background-nyc.jpg") !important;
+    }
+
     .section .section-sub{
         margin: 0 auto;
         padding: 0;
@@ -613,6 +620,10 @@ body{
 @media only screen and (max-width: 520px) and (min-width: 400px){
     html #menu{
         display: none;
+    }
+
+    #background-image{
+        background-image: url("../img/background-nyc.jpg") !important;
     }
 
     .section .section-sub{
@@ -710,6 +721,10 @@ body{
         display: none;
     }
 
+    #background-image{
+        background-image: url("../img/background-nyc.jpg") !important;
+    }
+
     #section-1 #name-container {
         width: -webkit-fill-available;
         padding: 0 11px;
@@ -755,7 +770,7 @@ body{
 
     #profile-info {
         margin-top: 20px;
-        width: 340px;
+        width: 289px;
     }
 
     .icon-container img {

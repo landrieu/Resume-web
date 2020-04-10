@@ -28,7 +28,7 @@ var projects = [{
     status:         "",
     technology:     "Go, React JS",
     link:           "",
-    backgroundImg:  "url(img/project.jpeg)"
+    backgroundImg:  "../img/Countries_4.png"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -43,7 +43,7 @@ var projects = [{
     status:         "",
     technology:     "Go, React JS",
     link:           "",
-    backgroundImg:  "url(img/project.jpeg)"
+    backgroundImg:  "../img/Coin_1.png"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -90,3 +90,5 @@ var projects = [{
     link:           "",
     backgroundImg:  "url(img/project.jpeg)"
 }];
+
+//"../img/NFL_prono_1.png"
