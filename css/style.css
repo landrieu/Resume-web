@@ -44,19 +44,11 @@ body{
     padding: 20px 0;
 }
 
-@media only screen and (max-width: 1299px) and (min-width: 1000px){
-    .section .section-sub{
-        margin: 0 auto;
-        padding: 0;
-        position: relative;
-        width: 944px;
-    }
-}
-
-@media only screen and (max-width: 800px){
-    html #menu{
-        display: none;
-    }
+.section .section-sub{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 980px;
 }
 
 
@@ -484,4 +476,333 @@ body{
     height: 40px;
     background-color: #444;
     color: white;
+}
+@media only screen and (max-width: 1299px) and (min-width: 1000px){
+    .section .section-sub{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: 944px;
+    }
+}
+
+
+@media only screen and (max-width: 1028px) and (min-width: 800px){
+    .section .section-sub{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: auto;
+        padding: 0 30px;
+    }
+    .experience-detail-photo {
+        width: 25%;
+    }
+    .experience-detail-information {
+        width: 65%;
+        min-width: 480px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 660px){
+    html #menu{
+        display: none;
+    }
+
+    .section .section-sub{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: auto;
+        padding: 0 30px;
+    }
+
+    .experience-detail {
+        display: block;
+    }
+
+    .experience-detail-photo {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        text-align: center;
+        margin: auto;
+    }
+
+    .experience-detail-information-box .experience-detail-location,
+    .experience-detail-information-box .experience-detail-dates {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 660px) and (min-width: 520px){
+    html #menu{
+        display: none;
+    }
+
+    .section .section-sub{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: auto;
+        padding: 0 30px;
+    }
+
+    #contact-detail {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    #border-separator {
+        border-bottom: 243px solid #c5cac0;
+        border-right: 35px solid transparent;
+    }
+
+    #profile-photo img {
+        height: 243px;
+    }
+
+    #profile-info {
+        margin-top: 20px;
+        width: 441px;
+    }
+
+    .experience-detail {
+        display: block;
+    }
+
+    .experience-detail-photo {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        text-align: center;
+        margin: auto;
+    }
+
+    .experience-detail-information-box .experience-detail-location,
+    .experience-detail-information-box .experience-detail-dates {
+        text-align: center;
+    }
+
+    .rating-sections{
+        display: block;
+    }
+
+    .rating-sections ul{
+        width: 60%;
+        margin: auto;
+        width: -webkit-fill-available;
+    }
+
+    .rating-line {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        width: auto;
+        min-width: auto;
+    }
+
+    .project{
+        width: -webkit-fill-available;
+    }
+}
+
+@media only screen and (max-width: 520px) and (min-width: 400px){
+    html #menu{
+        display: none;
+    }
+
+    .section .section-sub{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: auto;
+        padding: 0 30px;
+    }
+
+    #contact-name-position{
+        margin-bottom: 10px;
+    }
+
+    #contact-detail {
+        padding: 2px 0px 2px 4px;
+        font-size: 10px;
+        height: 190px;
+    }
+
+    #contact-info ul{
+        padding-left: 8px;
+    }
+
+    #contact-name {
+        font-size: 21px;
+    }
+
+    #contact-position {
+        font-size: 14px;
+    }
+    #border-separator {
+        border-bottom: 194px solid #c5cac0;
+        border-right: 15px solid transparent;
+    }
+
+    #profile-photo img {
+        height: 194px;
+    }
+
+    #profile-info {
+        margin-top: 20px;
+        width: 340px;
+    }
+
+    .icon-container img {
+        max-height: 16px;
+        max-width: 16px;
+    }
+
+    .experience-detail {
+        display: block;
+    }
+
+    .experience-detail-photo {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        text-align: center;
+        margin: auto;
+    }
+
+    .experience-detail-information-box .experience-detail-location,
+    .experience-detail-information-box .experience-detail-dates {
+        text-align: center;
+    }
+
+    .rating-sections{
+        display: block;
+    }
+
+    .rating-sections ul{
+        width: 60%;
+        margin: auto;
+        width: -webkit-fill-available;
+    }
+
+    .rating-line {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        width: auto;
+        min-width: auto;
+    }
+
+    .project{
+        width: -webkit-fill-available;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    html #menu{
+        display: none;
+    }
+
+    #section-1 #name-container {
+        width: -webkit-fill-available;
+        padding: 0 11px;
+    }
+
+    .section .section-sub{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: auto;
+        padding: 0 10px;
+    }
+
+    #contact-name-position{
+        margin-bottom: 10px;
+    }
+
+    #contact-detail {
+        padding: 2px 0px 2px 4px;
+        font-size: 9px;
+        height: 157px;
+    }
+
+    #contact-info ul{
+        padding-left: 2px;
+    }
+
+    #contact-name {
+        font-size: 19px;
+    }
+
+    #contact-position {
+        font-size: 11px;
+    }
+    #border-separator {
+        border-bottom: 161px solid #c5cac0;
+        border-right: 15px solid transparent;
+    }
+
+    #profile-photo img {
+        height: 161px;
+    }
+
+    #profile-info {
+        margin-top: 20px;
+        width: 340px;
+    }
+
+    .icon-container img {
+        max-height: 12px;
+        max-width: 12px;
+    }
+
+    .experience-detail {
+        display: block;
+    }
+
+    .experience-detail-photo {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        text-align: center;
+        margin: auto;
+    }
+
+    .experience-detail-information-box .experience-detail-location,
+    .experience-detail-information-box .experience-detail-dates {
+        text-align: center;
+    }
+
+    .rating-sections{
+        display: block;
+    }
+
+    .rating-sections ul{
+        width: 60%;
+        margin: auto;
+        width: -webkit-fill-available;
+        padding-left: 0;
+    }
+
+    .rating-line {
+        margin: auto;
+    }
+
+    .experience-detail-information {
+        width: auto;
+        min-width: auto;
+    }
+
+    .project{
+        width: -webkit-fill-available;
+        height: 150px;
+    }
 }
