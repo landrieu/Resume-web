@@ -28,7 +28,7 @@ var projects = [{
     status:         "",
     technology:     "Go, React JS",
     link:           "",
-    backgroundImg:  "../img/Countries_4.png"
+    backgroundImg:  "url(img/Countries_4.png)"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -43,7 +43,7 @@ var projects = [{
     status:         "",
     technology:     "Go, React JS",
     link:           "",
-    backgroundImg:  "../img/Coin_1.png"
+    backgroundImg:  "url(img/Coin_5.png)"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -58,7 +58,7 @@ var projects = [{
     status:         "",
     technology:     "MongoDb, Angular 4, Node JS, JQuery",
     link:           "",
-    backgroundImg:  "url(img/project.jpeg)"
+    backgroundImg:  "url(img/NMDb_1.png)"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -73,7 +73,7 @@ var projects = [{
     status:         "",
     technology:     "C++, SFML",
     link:           "",
-    backgroundImg:  "url(img/project.jpeg)"
+    backgroundImg:  "url(img/pokemon_map_1.png)"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -88,7 +88,7 @@ var projects = [{
     status:         "",
     technology:     "C++, SFML",
     link:           "",
-    backgroundImg:  "url(img/project.jpeg)"
+    backgroundImg:  "url(img/pokemon_fight_1.png)"
 }];
 
 //"../img/NFL_prono_1.png"

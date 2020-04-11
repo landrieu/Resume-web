@@ -4,6 +4,18 @@ function Location(city, region, country) {
     this.country = country;
 }
 
+var experienceHTMLClassNames = {
+    experienceDetail:                   "experience-detail",
+    experienceDetailPhoto:              "experience-detail-photo",
+    experienceDetailPhotoContainer:     "experience-detail-photo-container",
+    experienceDetailInformation:        "experience-detail-information",
+    experienceDetailName:               "experience-detail-name",
+    experienceDetailInformationBox:     "experience-detail-information-box",
+    experienceDetailDates:              "experience-detail-dates",
+    experienceDetailLocation:           "experience-detail-location",
+    experienceDetailLongDesc:           "experience-detail-long-desc"
+};
+
 var exp = [{
     dateStart: "2014/09/01",
     dateEnd: "2016/06/31",
