@@ -2,19 +2,34 @@ let last_known_scroll_position = 0;
 let ticking = false;
 let previousScrollPosition = 0;
 
+var backgroundImage = [
+  {
+    src: "img/background-sydney.jpg", 
+    backgroundPosition: "bottom",
+    type: "desktop"
+  },{
+    src: "img/background-nyc.jpg", 
+    backgroundPosition: "center",
+    type: "mobile"
+  }
+];
+
 function loadImage(divImgID, imgSrc){
-    var img = new Image();
-    img.src = imgSrc;
-    img.onload = function(){
-        console.log("Height: " + this.height);
-        var divImg = document.getElementById(divImgID);
-        divImg.style.backgroundImage = "url(" + imgSrc + ")";
-        divImg.style.opacity = 1;
+    var divImgID = "background-image";
+    var imgArr = [];
+
+    for(let i = 0; i < backgroundImage.length; i++){
+      imgArr[i]     = new Image();
+      imgArr[i].src = backgroundImage[i].src;
+
+      if(i == 0){
+        imgArr[i].onload = function(){
+          var divImg = document.getElementById(divImgID);
+          divImg.style.backgroundImage = "url(" + backgroundImage[i].src + ")";
+          divImg.style.opacity = 1;
+        };
+      }
     }
-    
-    //Load back up image for mobile
-    var imgBackUp = new Image();
-    imgBackUp.src = "img/background-nyc.jpg";
 }
 
 function handleIndicator() {
@@ -127,7 +142,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     window.addEventListener('resize', handleIndicator);
 
-    loadImage("background-image", "https://www.andrewbarnesphotography.com.au/wp-content/uploads/2016/01/Sails-and-Clouds.jpg");
+    //Load background image
+    loadImage();
 
     //Insert experiences
     insertExperienceInformations();

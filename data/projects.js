@@ -13,43 +13,46 @@ var projects = [{
     status:         "",
     technology:     "Android, Java, Node JS, Mongo Db",
     link:           "",
-    backgroundImg:  "url(img/project.jpeg)"
+    backgroundImg:  "url(img/fitwise_4.png)",
+    year:           "2017"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
     length:         "1 month",
-    name:           "Side project - Guess countries",
+    name:           "Guess countries",
     shortDesc:      "",
     longDesc:       "",
     logo:           "",
     smallLogo:      "",
     color:          "#ed1a37",
-    type:           "Personal project",
+    type:           "Side project",
     status:         "",
     technology:     "Go, React JS",
     link:           "",
-    backgroundImg:  "url(img/Countries_4.png)"
+    backgroundImg:  "url(img/Countries_4.png)",
+    year:           "2019"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
     length:         "1 month",
-    name:           "Side project - Draw graph",
-    shortDesc:      "",
+    name:           "Draw graph",
+    shortDesc:      "Built a graph on coin from scratch. Used canvas",
     longDesc:       "",
     logo:           "",
     smallLogo:      "",
     color:          "#ed1a37",
-    type:           "Personal project",
+    type:           "Side project",
     status:         "",
-    technology:     "Go, React JS",
+    technology:     "Go, React JS, Canvas",
     link:           "",
-    backgroundImg:  "url(img/Coin_5.png)"
+    backgroundImg:  "url(img/Coin_5.png)",
+    year:           "2019"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
     length:         "5 months",
     name:           "NMDb",
-    shortDesc:      "",
+    shortDesc:      "Web application is a movie database users can access to movies technical informations. They can add their own information, rate movies ...",
     longDesc:       "",
     logo:           "",
     smallLogo:      "",
@@ -57,14 +60,15 @@ var projects = [{
     type:           "Personal project",
     status:         "",
     technology:     "MongoDb, Angular 4, Node JS, JQuery",
-    link:           "",
-    backgroundImg:  "url(img/NMDb_1.png)"
+    link:           "https://github.com/landrieu/NMDb",
+    backgroundImg:  "url(img/NMDb_1.png)",
+    year:           "2017"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
     length:         "1 month",
-    name:           "Pokemon - Map",
-    shortDesc:      "",
+    name:           "Pokemon: Map",
+    shortDesc:      "Built a pokemon scratch. The purpose was to add elements easily to the map.",
     longDesc:       "",
     logo:           "",
     smallLogo:      "",
@@ -72,13 +76,46 @@ var projects = [{
     type:           "Personal project",
     status:         "",
     technology:     "C++, SFML",
-    link:           "",
-    backgroundImg:  "url(img/pokemon_map_1.png)"
+    link:           "https://github.com/landrieu/Pokemon-Map",
+    backgroundImg:  "url(img/pokemon_map_1.png)",
+    year:           "2017"
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
     length:         "4 months",
-    name:           "Pokemon - Combat",
+    name:           "Pokemon: Fight",
+    shortDesc:      "Game based on pokemon. Designed and built the fight part.",
+    longDesc:       "",
+    logo:           "",
+    smallLogo:      "",
+    color:          "#ed1a37",
+    type:           "School project",
+    status:         "",
+    technology:     "C++, SFML",
+    link:           "https://github.com/landrieu/Pokemon-Fight-Mode",
+    backgroundImg:  "url(img/pokemon_fight_1.png)",
+    year:           "2017"
+},{
+    dateStart:      "2018/03/01",
+    dateEnd:        "2020/03/30",
+    length:         "3 months",
+    name:           "Flights track",
+    shortDesc:      "Built a tool to look up flight ticket at according to the criterias choosen. The tracker runs many times a day.",
+    longDesc:       "",
+    logo:           "",
+    smallLogo:      "",
+    color:          "#ed1a37",
+    type:           "Personal project",
+    status:         "",
+    technology:     "Node JS, EJS, Shell script, MongoDB",
+    link:           "",
+    backgroundImg:  "url(img/NFL_prono_1.png)",
+    year:           "2018"
+}/*,{
+    dateStart:      "2018/03/01",
+    dateEnd:        "2020/03/30",
+    length:         "4 months",
+    name:           "NFL prono",
     shortDesc:      "",
     longDesc:       "",
     logo:           "",
@@ -88,7 +125,8 @@ var projects = [{
     status:         "",
     technology:     "C++, SFML",
     link:           "",
-    backgroundImg:  "url(img/pokemon_fight_1.png)"
-}];
+    backgroundImg:  "url(img/NFL_prono_1.png)",
+    year:           "2018"
+}*/];
 
 //"../img/NFL_prono_1.png"

@@ -3,7 +3,7 @@ var abilities = {
         {
             name: "HTML",
             rate: 4.5,
-            comment: ""
+            comment: "Exper"
         },{
             name: "CSS",
             rate: 4.5,
@@ -71,6 +71,10 @@ var abilities = {
         },{
             name: "VBS",
             rate: 3,
+            comment: ""
+        },{
+            name: "Canvas",
+            rate: 4,
             comment: ""
         }
     ],

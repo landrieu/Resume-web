@@ -1,11 +1,25 @@
-function compareEvent(a, b) {
-    const startDateA = new Date(a.dateStart);
-    const startDateB = new Date(b.dateStart);
-  
+function compareExperiences(a, b) {
+    return compareEvent(a, b, "dateStart", true);
+}
+
+function compareProjects(a, b) {
+    
+    return compareEvent(a, b, "year", true);
+}
+
+function compareEvent(a, b, c, isDate) {
+    let compA = a[c];
+    let compB = b[c];
     let comparison = 0;
-    if (startDateA > startDateB) {
+
+    if(isDate){
+        compA = new Date(compA);
+        compB = new Date(compB);
+    }
+    console.log(compA, compB);
+    if (compA > compB) {
       comparison = -1;
-    } else if (startDateA < startDateB) {
+    } else if (compA < compB) {
       comparison = 1;
     }
     return comparison;
@@ -43,11 +57,14 @@ function createNode(tag, className, id, content, styles){
     return node;
 }
 
-function createLinkNodeExperience(evt){
+function createNodeLink(href, innerHTML){
     var node = document.createElement("A");
-    node.href = evt.link;
-    node.innerHTML = evt.link;
-    node.target = "_blank";
+    node.href       = href;
+    node.target     = "_blank";
+
+    if(innerHTML){
+        node.innerHTML  = innerHTML;
+    }
 
     return node;
 }
@@ -103,6 +120,14 @@ function buildProjectTime(year, length){
     }
 }
 
+function buildProjectTop(name, type){
+    if(type){
+        return name + " - " + type;
+    }else{
+        return name;
+    }
+}
+
 function insertProjectsInformations(){
 
     for(let i = 0; i < projects.length; i++){
@@ -112,11 +137,12 @@ function insertProjectsInformations(){
         let nodeProjectInner    = createNode("DIV", "project-inner", null, null, {"background-image": project.backgroundImg});
         let nodeProjectOverlay  = createNode("DIV", "overlay overlay-project", null, null, null);
         let nodeProjectContent  = createNode("DIV", "project-content", null, null, null);
-        let nodeProjectTop      = createNode("DIV", "project-top", null, project.name, null);
+        let nodeProjectTop      = createNode("DIV", "project-top", null, buildProjectTop(project.name, project.type), null);
         let nodeProjectInfo     = createNode("DIV", "project-info", null, null, null);
         let nodeProjectDate     = createNode("DIV", "project-date", null, buildProjectTime(project.year, project.length), null);
         let nodeProjectTechno   = createNode("DIV", "project-techno", null, project.technology, null);
         let nodeProjectDesc     = createNode("DIV", "project-desc", null, project.shortDesc, null);
+        let nodeProjectLink     = createNodeLink(project.link);
     
         nodeProjectInfo = appendNodeToNode(nodeProjectDate, nodeProjectInfo);
         nodeProjectInfo = appendNodeToNode(nodeProjectTechno, nodeProjectInfo);
@@ -126,9 +152,11 @@ function insertProjectsInformations(){
         nodeProjectContent = appendNodeToNode(nodeProjectInfo, nodeProjectContent);
         
 
-        nodeProject = appendNodeToNode(nodeProjectInner, nodeProject);
-        nodeProject = appendNodeToNode(nodeProjectOverlay, nodeProject);
-        nodeProject = appendNodeToNode(nodeProjectContent, nodeProject);
+        nodeProjectLink = appendNodeToNode(nodeProjectInner, nodeProjectLink);
+        nodeProjectLink = appendNodeToNode(nodeProjectOverlay, nodeProjectLink);
+        nodeProjectLink = appendNodeToNode(nodeProjectContent, nodeProjectLink);
+
+        nodeProject = appendNodeToNode(nodeProjectLink, nodeProject);
 
         document.getElementById("projects-container").appendChild(nodeProject);
     }
@@ -152,6 +180,8 @@ function insertSkillInformations(sectionName, abilities){
 
         let nodeRatingName      = createNode("SPAN", "rating-name", null, ability.name, null);
         let nodeRatingItemLine  = createNode("SPAN", "rating-item-line", null, null, null);
+        let nodeRatingItemCntnr = createNode("DIV", "rating-item-container", null, null, null);
+        let nodeRatingDesc      = createNode("DIV", "rating-desc", null, ability.comment, null);
         let nodeRatingLine      = createNode("LI", "rating-line", null, null, null);
 
         var grade = ability.rate;
@@ -183,8 +213,13 @@ function insertSkillInformations(sectionName, abilities){
             nodeRatingItemLine = appendNodeToNode(nodeRatingItem, nodeRatingItemLine);
         }
 
-        nodeRatingLine = appendNodeToNode(nodeRatingName, nodeRatingLine);
-        nodeRatingLine = appendNodeToNode(nodeRatingItemLine, nodeRatingLine);
+        //nodeRatingLine = appendNodeToNode(nodeRatingName, nodeRatingLine);
+        //nodeRatingLine = appendNodeToNode(nodeRatingItemLine, nodeRatingLine);
+        nodeRatingItemCntnr = appendNodeToNode(nodeRatingName, nodeRatingItemCntnr);
+        nodeRatingItemCntnr = appendNodeToNode(nodeRatingItemLine, nodeRatingItemCntnr);
+
+        nodeRatingLine = appendNodeToNode(nodeRatingItemCntnr, nodeRatingLine);
+        nodeRatingLine = appendNodeToNode(nodeRatingDesc, nodeRatingLine);
 
         if(i % 2 === 0){
             nodeRatingLeftSection = appendNodeToNode(nodeRatingLine, nodeRatingLeftSection);
@@ -214,7 +249,7 @@ function insertExperienceInformations(){
         let nodePhoto          = createNode("DIV", experienceHTMLClassNames.experienceDetailPhoto, null, null);
         let nodeDetail         = createNode("DIV", experienceHTMLClassNames.experienceDetail, null, null, {"backgroundColor": "#fff", "color": "rgb(51, 51, 51)"});
         
-        let nodeLink = createLinkNodeExperience(event);
+        let nodeLink = createNodeLink(event.link, event.link);
         let nodeImg  = createImgNodeExperience(event.logo, null, null);
 
         nodeInfoBox = appendNodeToNode(nodeDates, nodeInfoBox);
@@ -235,7 +270,9 @@ function insertExperienceInformations(){
     }
 }
 
-exp.sort(compareEvent);
+exp.sort(compareExperiences);
+
+projects.sort(compareProjects);
 
 //Download the resume
 

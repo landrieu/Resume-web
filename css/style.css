@@ -77,6 +77,23 @@ body{
     transition: background-image 1s ease-in-out, opacity 2s ease-in-out;
 }
 
+#background-image-link{
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    background-color: #231f1f5e;
+    padding: 3px 5px;
+    right: 0;
+    color: white;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#background-image-link a{
+    color: #fff;
+}
+
 .overlay{
     position: absolute;
     top: 0;
@@ -88,7 +105,7 @@ body{
 #section-1 #overlay-home{
     background-color: #3d4671;
     /*background-image: linear-gradient(to bottom left, #ec4747, #3d4671 72%);*/
-    opacity: 0.3;
+    opacity: 0.5;
     z-index: 2;
 }
 
@@ -149,10 +166,21 @@ body{
 .icon-container img{
     max-height: 20px;
     max-width: 20px;
+    display: flex;
+    align-items: center;
 }
 
 #contact-info ul li{
     display: flex;
+}
+
+#contact-info a{
+    display: flex;
+    align-items: center;
+}
+
+#contact-info li{
+    margin-bottom: 9px;
 }
 
 #contact-name{
@@ -367,16 +395,31 @@ body{
 .rating-line{
     width: 260px;
     color: #475563;
-    height: 19px;
-    -webkit-transition: height 0.7s ease;
-    -moz-transition: height 0.7s ease;
-    -o-transition: height 0.7s ease;
-    transition: height 0.7s ease;
+    /*height: 19px;*/
+    overflow: hidden;
     /*font-weight: bold;*/
 }
+.rating-item-container{
+    padding: 0 5px;
+}
 
-.rating-line:hover{
-    height: 80px;
+.rating-line:hover .rating-item-container{
+    background-color: #ccc;
+}
+
+.rating-line .rating-desc{
+    max-height: 0px;
+    -webkit-transition: max-height 0.7s ease;
+    -moz-transition: max-height 0.7s ease;
+    -o-transition: max-height 0.7s ease;
+    transition: max-height 0.7s ease;
+    font-size: 11px;
+    font-style: italic;
+    padding: 0 5px;
+}
+
+.rating-line:hover .rating-desc{
+    max-height: 100px;
 }
 
 .rating-item{
@@ -395,6 +438,8 @@ body{
     justify-content: space-around;
     width: 70px;
     float: right;
+    height: 19px;
+    align-items: center;
 }
 
 .rating-item-first, .rating-item-second{
@@ -455,9 +500,23 @@ body{
     color: #eee;
 }
 
+.project-info .project-date, .project-info .project-techno{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-info .project-desc{
+    text-align: justify;
+}
+
 .project-content div{
     text-align: left;
     padding: 5px 8px;
+}
+
+.project-top{
+    font-size: 18px;
 }
 
 .project-info{
@@ -512,7 +571,14 @@ body{
     height: 40px;
     background-color: #3d4671;
     color: white;
+    display: flex;
+    align-items: center;
 }
+
+#footer-container{
+    margin: auto;
+}
+
 @media only screen and (max-width: 1299px) and (min-width: 1000px){
     .section .section-sub{
         margin: 0 auto;
@@ -579,6 +645,12 @@ body{
 
     #background-image{
         background-image: url("../img/background-nyc.jpg") !important;
+        background-position: center !important;
+    }
+
+    #background-image-link{
+        visibility: hidden;
+        opacity: 0;
     }
 
     .section .section-sub{
@@ -657,6 +729,12 @@ body{
 
     #background-image{
         background-image: url("../img/background-nyc.jpg") !important;
+        background-position: center !important;
+    }
+
+    #background-image-link{
+        visibility: hidden;
+        opacity: 0;
     }
 
     .section .section-sub{
@@ -756,6 +834,12 @@ body{
 
     #background-image{
         background-image: url("../img/background-nyc.jpg") !important;
+        background-position: center !important;
+    }
+
+    #background-image-link{
+        visibility: hidden;
+        opacity: 0;
     }
 
     #section-1 #name-container {
