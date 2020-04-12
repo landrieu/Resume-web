@@ -416,6 +416,7 @@ body{
     font-size: 11px;
     font-style: italic;
     padding: 0 5px;
+    text-align: justify;
 }
 
 .rating-line:hover .rating-desc{

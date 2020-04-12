@@ -16,7 +16,7 @@ var experienceHTMLClassNames = {
     experienceDetailLongDesc:           "experience-detail-long-desc"
 };
 
-var exp = [{
+var experiences = [{
     dateStart: "2014/09/01",
     dateEnd: "2016/06/31",
     name: "ENSEA",
@@ -68,10 +68,10 @@ var exp = [{
     link: "https://www.esker.com"
 },{
     dateStart: "2018/03/01",
-    dateEnd: "2020/03/30",
+    dateEnd: "",
     name: "Esker",
     shortDesc: "",
-    longDesc: "I am working as a solution consultant for Esker, which is company spcialzed as . My role is to our customers end to end, from peoject desgin to the delivery. <br><b>Named Rookie of the year 2018</b></br>",
+    longDesc: "I am working as a solution consultant for Esker, which is company spcialzed as . My role is to our customers end to end, from peoject desgin to the delivery. <br />Delivered 10+ successful projects for both Accounts Payable and Purchasing solutions across a wide range of industries <br /> <br /><b>Named Rookie of the year 2018</b>",
     logo: "https://img.sdcexec.com/files/base/acbm/sdce/image/2018/11/New_esker_logo.5bec454c8317f.png?auto=format&fit=max&w=1200",
     smallLogo: "",
     color: "#ed1a37",

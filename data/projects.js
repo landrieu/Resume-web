@@ -1,8 +1,19 @@
+var projectHTMLClassNames = {
+    project:        "project",
+    projectInner:   "project-inner",
+    projectOverlay: "overlay overlay-project",
+    projectContent: "project-content",
+    projectTop:     "project-top",
+    projectInfo:    "project-info",
+    projectDate:    "project-date",
+    projectTechno:  "project-techno",
+    projectDesc:    "project-desc"
+};
 
 var projects = [{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
-    length:         "",
+    length:         "8 months",
     name:           "Fitwise",
     shortDesc:      "",
     longDesc:       "",
@@ -109,7 +120,7 @@ var projects = [{
     status:         "",
     technology:     "Node JS, EJS, Shell script, MongoDB",
     link:           "",
-    backgroundImg:  "url(img/NFL_prono_1.png)",
+    backgroundImg:  "url(img/track_flight_2.png)",
     year:           "2018"
 }/*,{
     dateStart:      "2018/03/01",

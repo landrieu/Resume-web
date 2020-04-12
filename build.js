@@ -16,7 +16,7 @@ function compareEvent(a, b, c, isDate) {
         compA = new Date(compA);
         compB = new Date(compB);
     }
-    console.log(compA, compB);
+  
     if (compA > compB) {
       comparison = -1;
     } else if (compA < compB) {
@@ -133,15 +133,15 @@ function insertProjectsInformations(){
     for(let i = 0; i < projects.length; i++){
         let project = projects[i];
 
-        let nodeProject         = createNode("DIV", "project", null, null, null);
-        let nodeProjectInner    = createNode("DIV", "project-inner", null, null, {"background-image": project.backgroundImg});
-        let nodeProjectOverlay  = createNode("DIV", "overlay overlay-project", null, null, null);
-        let nodeProjectContent  = createNode("DIV", "project-content", null, null, null);
-        let nodeProjectTop      = createNode("DIV", "project-top", null, buildProjectTop(project.name, project.type), null);
-        let nodeProjectInfo     = createNode("DIV", "project-info", null, null, null);
-        let nodeProjectDate     = createNode("DIV", "project-date", null, buildProjectTime(project.year, project.length), null);
-        let nodeProjectTechno   = createNode("DIV", "project-techno", null, project.technology, null);
-        let nodeProjectDesc     = createNode("DIV", "project-desc", null, project.shortDesc, null);
+        let nodeProject         = createNode("DIV", projectHTMLClassNames.project, null, null, null);
+        let nodeProjectInner    = createNode("DIV", projectHTMLClassNames.projectInner, null, null, {"background-image": project.backgroundImg});
+        let nodeProjectOverlay  = createNode("DIV", projectHTMLClassNames.projectOverlay, null, null, null);
+        let nodeProjectContent  = createNode("DIV", projectHTMLClassNames.projectContent, null, null, null);
+        let nodeProjectTop      = createNode("DIV", projectHTMLClassNames.projectTop, null, buildProjectTop(project.name, project.type), null);
+        let nodeProjectInfo     = createNode("DIV", projectHTMLClassNames.projectInfo, null, null, null);
+        let nodeProjectDate     = createNode("DIV", projectHTMLClassNames.projectDate, null, buildProjectTime(project.year, project.length), null);
+        let nodeProjectTechno   = createNode("DIV", projectHTMLClassNames.projectTechno, null, project.technology, null);
+        let nodeProjectDesc     = createNode("DIV", projectHTMLClassNames.projectDesc, null, project.shortDesc, null);
         let nodeProjectLink     = createNodeLink(project.link);
     
         nodeProjectInfo = appendNodeToNode(nodeProjectDate, nodeProjectInfo);
@@ -170,34 +170,31 @@ function insertSkillsInformations(){
 
 function insertSkillInformations(sectionName, abilities){
 
-    let nodeRatingLeftSection  = createNode("UL", "rating-section-left", null, null, null);
-    let nodeRatingRightSection = createNode("UL", "rating-section-right", null, null, null);
-    let nodeRatingSections = createNode("DIV", "rating-sections", null, null, null);
-    let nodeRatingTitle    = createNode("DIV", "rating-title", null, sectionName);
+    let nodeRatingLeftSection  = createNode("UL", abilityHTMLClassNames.ratingLeftSection, null, null, null);
+    let nodeRatingRightSection = createNode("UL", abilityHTMLClassNames.ratingRightSection, null, null, null);
+    let nodeRatingSections = createNode("DIV", abilityHTMLClassNames.ratingSections, null, null, null);
+    let nodeRatingTitle    = createNode("DIV", abilityHTMLClassNames.ratingTitle, null, sectionName);
 
     for(let i = 0; i < abilities.length; i++){
         let ability = abilities[i];
 
-        let nodeRatingName      = createNode("SPAN", "rating-name", null, ability.name, null);
-        let nodeRatingItemLine  = createNode("SPAN", "rating-item-line", null, null, null);
-        let nodeRatingItemCntnr = createNode("DIV", "rating-item-container", null, null, null);
-        let nodeRatingDesc      = createNode("DIV", "rating-desc", null, ability.comment, null);
-        let nodeRatingLine      = createNode("LI", "rating-line", null, null, null);
+        let nodeRatingName      = createNode("SPAN", abilityHTMLClassNames.ratingName, null, ability.name, null);
+        let nodeRatingItemLine  = createNode("SPAN", abilityHTMLClassNames.ratingItemLine, null, null, null);
+        let nodeRatingItemCntnr = createNode("DIV", abilityHTMLClassNames.ratingItemContainer, null, null, null);
+        let nodeRatingDesc      = createNode("DIV", abilityHTMLClassNames.ratingDesc, null, ability.comment, null);
+        let nodeRatingLine      = createNode("LI", abilityHTMLClassNames.ratingLine, null, null, null);
 
         var grade = ability.rate;
 
         for(let j = 0; j < 5; j++){
-            let nodeRatingItemFirst, nodeRatingItemSecond;
+            let nodeRatingItemFirst  = createNode("DIV", abilityHTMLClassNames.ratingItemFirst, null, null, null);
+            let nodeRatingItemSecond = createNode("DIV", abilityHTMLClassNames.ratingItemSecond, null, null, null);
+            let nodeRatingItem = createNode("DIV", abilityHTMLClassNames.ratingItem, null, null, null);
             let nodeRatingItemFirstFull, nodeRatingItemSecondFull;
-            let nodeRatingItem = createNode("DIV", "rating-item", null, null, null);
-
+            
             nodeRatingItemFirstFull  = ((grade - 0.5) == 0) || ((grade - 1) >= 0);
             nodeRatingItemSecondFull = ((grade - 1) >= 0);
-
             grade -= 1;
-
-            nodeRatingItemFirst  = createNode("DIV", "rating-item-first", null, null, null);
-            nodeRatingItemSecond = createNode("DIV", "rating-item-second", null, null, null);
 
             if(nodeRatingItemFirstFull){
                 nodeRatingItemFirst.classList.add("active");
@@ -213,8 +210,6 @@ function insertSkillInformations(sectionName, abilities){
             nodeRatingItemLine = appendNodeToNode(nodeRatingItem, nodeRatingItemLine);
         }
 
-        //nodeRatingLine = appendNodeToNode(nodeRatingName, nodeRatingLine);
-        //nodeRatingLine = appendNodeToNode(nodeRatingItemLine, nodeRatingLine);
         nodeRatingItemCntnr = appendNodeToNode(nodeRatingName, nodeRatingItemCntnr);
         nodeRatingItemCntnr = appendNodeToNode(nodeRatingItemLine, nodeRatingItemCntnr);
 
@@ -236,8 +231,8 @@ function insertSkillInformations(sectionName, abilities){
 }
 
 function insertExperienceInformations(){
-    for(let i = 0; i < exp.length; i++){
-        let event = exp[i];
+    for(let i = 0; i < experiences.length; i++){
+        let event = experiences[i];
 
         let nodeDates       = createNode("DIV", experienceHTMLClassNames.experienceDetailDates, null, formatDates(event.dateStart, event.dateEnd));
         let nodeLocation    = createNode("DIV", experienceHTMLClassNames.experienceDetailLocation, null, formatLocation(event.location));
@@ -270,12 +265,9 @@ function insertExperienceInformations(){
     }
 }
 
-exp.sort(compareExperiences);
+experiences.sort(compareExperiences);
 
 projects.sort(compareProjects);
-
-//Download the resume
-
 
 /*
 function computeExpTime(){

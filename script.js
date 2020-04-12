@@ -32,6 +32,26 @@ function loadImage(divImgID, imgSrc){
     }
 }
 
+/********** INDICATOR  **********/
+
+function initIndicator(){
+  buildIndicator();
+  handleIndicator();
+
+  var elements = document.getElementsByClassName("menu-section");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', roundListener, false);
+  }
+}
+
+var roundListener = function() {
+  var attribute = this.getAttribute("number");
+
+  var sectionToScroll = document.getElementById("section-" + attribute);
+  window.scrollTo(0, sectionToScroll.offsetTop);
+};
+
+
 function handleIndicator() {
   // Do something with the scroll position
   let sections = document.getElementsByClassName("section");
@@ -87,60 +107,55 @@ function buildIndicator(){
 }
 
 function createDivNode(id, className, number, content){
-    var node = document.createElement("DIV");        
+  var node = document.createElement("DIV");        
 
-    if(id){
-       node.id = id
-    };
-    
-    if(number !== null){
-      node.setAttribute("number", number + 1)
-    };
+  if(id){
+     node.id = id
+  };
+  
+  if(number !== null){
+    node.setAttribute("number", number + 1)
+  };
 
-    if(content){
-      node.innerHTML = content
-    };
+  if(content){
+    node.innerHTML = content
+  };
 
-    node.className          = className;
+  node.className          = className;
 
-    return node;
+  return node;
+}
+/*******************************/
+
+function initEvents(){
+  window.addEventListener('scroll', function(e) {
+    last_known_scroll_position = window.scrollY;
+  
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        handleIndicator(last_known_scroll_position);
+        ticking = false;
+      });
+  
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('resize', handleIndicator);
+
+  //Scroll to top
+  setTimeout(function(){
+    window.scrollTo(0, 0);
+  });
 }
 
-var roundListener = function() {
-    var attribute = this.getAttribute("number");
-
-    var sectionToScroll = document.getElementById("section-" + attribute);
-    window.scrollTo(0, sectionToScroll.offsetTop);
-};
-
-
-
-
-
-window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      handleIndicator(last_known_scroll_position);
-      ticking = false;
-    });
-
-    ticking = true;
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    // Your code to run since DOM is loaded and ready
-    buildIndicator();
-    handleIndicator();
-
-    var elements = document.getElementsByClassName("menu-section");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', roundListener, false);
-    }
-
-    window.addEventListener('resize', handleIndicator);
+    //DOM is loaded and ready
+    initIndicator();
+    
+    //Init events 
+    initEvents();
 
     //Load background image
     loadImage();
