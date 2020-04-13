@@ -59,9 +59,12 @@ function createNode(tag, className, id, content, styles){
 
 function createNodeLink(href, innerHTML){
     var node = document.createElement("A");
-    node.href       = href;
     node.target     = "_blank";
 
+    if(href){
+        node.href = href;
+    }
+    
     if(innerHTML){
         node.innerHTML  = innerHTML;
     }
@@ -86,11 +89,22 @@ function appendNodeToNode(nodeToAppend, node, nodeID){
     return node;
 }
 
+function formatDateType(date){
+    var formattedDate = new Date(date);
+    //let day = formattedDate.getDate();
+    //day = day.length === 2 ? day : "0" + day;
+    let month = (formattedDate.getMonth() + 1).toString();
+    let year = formattedDate.getFullYear();
+    month = month.length === 2 ? month : "0" + month;
+
+    return month + "/" + year;
+}
+
 function formatDates(dateStart, dateEnd){
     if(dateStart && dateEnd){
-        return "From " + dateStart + " to " + dateEnd; 
+        return "From " + formatDateType(dateStart) + " to " + formatDateType(dateEnd); 
     }else{
-        return "From " + dateStart;
+        return "From " + formatDateType(dateStart);
     }
 }
 

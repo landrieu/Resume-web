@@ -409,10 +409,10 @@ body{
 
 .rating-line .rating-desc{
     max-height: 0px;
-    -webkit-transition: max-height 0.7s ease;
-    -moz-transition: max-height 0.7s ease;
-    -o-transition: max-height 0.7s ease;
-    transition: max-height 0.7s ease;
+    -webkit-transition:  max-height 1s cubic-bezier(0, 0, 0.2, 1);
+    -moz-transition:  max-height 1s cubic-bezier(0, 0, 0.2, 1);
+    -o-transition:  max-height 1s cubic-bezier(0, 0, 0.2, 1);
+    transition:  max-height 1s cubic-bezier(0, 0, 0.2, 1);
     font-size: 11px;
     font-style: italic;
     padding: 0 5px;
@@ -468,7 +468,7 @@ body{
 .project{
     width: 200px;
     margin: 15px 25px;
-    height: 180px;
+    height: 204px;
     position: relative;
     /*background-color: #428bca;*/
     display: inline-block;
@@ -509,6 +509,11 @@ body{
 
 .project-info .project-desc{
     text-align: justify;
+    overflow: inherit;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }
 
 .project-content div{
@@ -534,7 +539,7 @@ body{
 }
 
 .project:hover .overlay-project{
-    opacity: 0.93;
+    opacity: 0.95;
 }
 
 .project-info div{
