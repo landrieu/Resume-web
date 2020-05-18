@@ -28,7 +28,8 @@ var projects = [{
     linkSourceCode: "https://github.com/landrieu/Fitwise",
     linkDemo:       "",
     backgroundImg:  "url(img/fitwise_4.png)",
-    year:           "2017"
+    year:           "2017",
+    priority:       1,
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -45,7 +46,8 @@ var projects = [{
     linkSourceCode: "https://github.com/landrieu/Guess-Capital",
     linkDemo:       "http://landrieu.cc/guess",
     backgroundImg:  "url(img/Countries_4.png)",
-    year:           "2019"
+    year:           "2019",
+    priority:       3,
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -62,7 +64,8 @@ var projects = [{
     linkSourceCode: "https://github.com/landrieu/Draw-Graph",
     linkDemo:       "http://landrieu.cc/currencies",
     backgroundImg:  "url(img/Coin_5.png)",
-    year:           "2019"
+    year:           "2019",
+    priority:       3,
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -79,7 +82,8 @@ var projects = [{
     linkSourceCode: "https://github.com/landrieu/NMDb",
     linkDemo:       "http://landrieu.cc/nmdb",
     backgroundImg:  "url(img/NMDb_1.png)",
-    year:           "2017"
+    year:           "2017",
+    priority:       3,
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -96,7 +100,8 @@ var projects = [{
     linkSourceCode: "https://github.com/landrieu/Pokemon-Map",
     linkDemo:       "",
     backgroundImg:  "url(img/pokemon_map_1.png)",
-    year:           "2017"
+    year:           "2017",
+    priority:       1,
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -113,7 +118,8 @@ var projects = [{
     linkSourceCode: "https://github.com/landrieu/Pokemon-Fight-Mode",
     linkDemo:       "",
     backgroundImg:  "url(img/pokemon_fight_1.png)",
-    year:           "2017"
+    year:           "2017",
+    priority:       1,
 },{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",
@@ -130,7 +136,8 @@ var projects = [{
     linkSourceCode: "",
     linkDemo:       "http://landrieu.cc/tracker",
     backgroundImg:  "url(img/track_flight_2.png)",
-    year:           "2018"
+    year:           "2018",
+    priority:       2,
 }/*,{
     dateStart:      "2018/03/01",
     dateEnd:        "2020/03/30",

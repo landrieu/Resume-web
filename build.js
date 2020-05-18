@@ -3,8 +3,10 @@ function compareExperiences(a, b) {
 }
 
 function compareProjects(a, b) {
-    
-    return compareEvent(a, b, "year", true);
+    let compA = new Date(a.year);
+    let compB = new Date(b.year);
+ 
+    return b.priority - a.priority || compA < compB;
 }
 
 function compareEvent(a, b, c, isDate) {
@@ -16,7 +18,7 @@ function compareEvent(a, b, c, isDate) {
         compA = new Date(compA);
         compB = new Date(compB);
     }
-  
+    
     if (compA > compB) {
       comparison = -1;
     } else if (compA < compB) {

@@ -113,6 +113,7 @@ body{
     color: white;
     position: relative;
     width: 30%;
+    min-width: 230px;
     margin: auto;
     text-align: center;
     top: 30px;
@@ -231,7 +232,7 @@ body{
     cursor: pointer;
 }
 
-.experience-period:hover {
+.experience-period:hover, .experience-period:active{
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     border: 1px solid #444;
 }
@@ -269,7 +270,7 @@ body{
 .menu-section.active .menu-title, .menu-section.active .round-indicator-container{
     opacity: 1;
 }
-.menu-section:hover .menu-title, .menu-section:hover .round-indicator-container{
+.menu-section:hover .menu-title, .menu-section:hover .round-indicator-container, .menu-section:active .menu-title, .menu-section:active .round-indicator-container{
     opacity: 0.8;
 }
 
@@ -370,7 +371,7 @@ body{
     margin: auto;
     /*text-align: center;
     font-weight: bold;*/
-    font-size: 20px;
+    font-size: 1.4rem;
     color: #678;
 }
 
@@ -403,7 +404,7 @@ body{
     padding: 0 5px;
 }
 
-.rating-line:hover .rating-item-container{
+.rating-line:hover .rating-item-container, .rating-line:active .rating-item-container{
     background-color: #ccc;
 }
 
@@ -419,7 +420,7 @@ body{
     text-align: justify;
 }
 
-.rating-line:hover .rating-desc{
+.rating-line:hover .rating-desc, .rating-line:active .rating-desc{
     max-height: 100px;
 }
 
@@ -455,10 +456,8 @@ body{
 .rating-title{
     text-align: center;
     padding: 10px 0;
-    font-weight: bold;
-    font-size: 26px;
+    font-size: 1.6rem;
     color: #475563;
-    font-family: "arapey";
 }
 
 #projects-container{
@@ -520,7 +519,7 @@ body{
 }
 
 .project-top{
-    font-size: 18px;
+    font-size: 1.4rem;;
 }
 
 .project-info{
@@ -528,15 +527,15 @@ body{
     transition: all 500ms ease-in-out;
 }
 
-.project:hover .project-info{
+.project:hover .project-info, .project:active .project-info{
     transform: translate3d(0,0,0);
 }
 
-.project:hover .project-inner{
+.project:hover .project-inner, .project:active .project-inner{
     transform: scale(1.2);
 }
 
-.project:hover .overlay-project{
+.project:hover .overlay-project, .project:active .overlay-project{
     opacity: 0.95;
 }
 
@@ -555,7 +554,7 @@ body{
     transition: all 500ms ease-in-out;
 }
 
-.project:hover .project-links{
+.project:hover .project-links, .project:active .project-links{
     transform: translate3d(0,0,0);
 }
 
@@ -565,7 +564,7 @@ body{
 }
 
 .project-links-button-container a{
-    width: 95px;
+    width: 32%;
     border: 1px #ffffff solid;
     color: #ffffff;
     cursor: pointer;
@@ -576,7 +575,7 @@ body{
     cursor: pointer;
 }
 
-.project-links-button-container a:hover{
+.project-links-button-container a:hover, .project-links-button-container a:active{
     color: #3d4671;
     border-color: #3d4671;
     background-color: #fff;
@@ -602,7 +601,7 @@ body{
     padding: 10px 15px;
 }
 
-#button-container a:hover{
+#button-container a:hover, #button-container a:active{
     color: white;
     border-color: white;
     background-color: #3d4671;
@@ -681,6 +680,9 @@ body{
 }
 
 @media only screen and (max-width: 660px) and (min-width: 520px){
+    html {
+        font-size: 12px;
+    }
     html #menu{
         display: none;
     }
@@ -761,10 +763,14 @@ body{
 
     .project{
         width: -webkit-fill-available;
+        height: 190px;
     }
 }
 
 @media only screen and (max-width: 520px) and (min-width: 400px){
+    html {
+        font-size: 11px;
+    }
     html #menu{
         display: none;
     }
@@ -857,6 +863,16 @@ body{
 
     .rating-line {
         margin: auto;
+        height: 17px;
+    }
+
+    .rating-item{
+        width: 7px;
+        height: 7px;
+    }
+
+    .rating-item-line{
+        height: 17px;
     }
 
     .experience-detail-information {
@@ -866,10 +882,15 @@ body{
 
     .project{
         width: -webkit-fill-available;
+        height: 220px;
     }
 }
 
 @media only screen and (max-width: 400px){
+    html {
+        font-size: 10px;
+    }
+
     html #menu{
         display: none;
     }
@@ -933,8 +954,8 @@ body{
     }
 
     .icon-container img {
-        max-height: 12px;
-        max-width: 12px;
+        max-height: 10px;
+        max-width: 10px;
     }
 
     .experience-detail {
@@ -955,6 +976,20 @@ body{
         text-align: center;
     }
 
+    .rating-item{
+        width: 6px;
+        height: 6px;
+    }
+
+    .rating-line {
+        margin: auto;
+        height: 16px;
+    }
+
+    .rating-item-line{
+        height: 16px;
+    }
+
     .rating-sections{
         display: block;
     }
@@ -966,10 +1001,6 @@ body{
         padding-left: 0;
     }
 
-    .rating-line {
-        margin: auto;
-    }
-
     .experience-detail-information {
         width: auto;
         min-width: auto;
@@ -977,6 +1008,6 @@ body{
 
     .project{
         width: -webkit-fill-available;
-        height: 150px;
+        height: 190px;
     }
 }
