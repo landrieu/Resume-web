@@ -147,30 +147,40 @@ function insertProjectsInformations(){
     for(let i = 0; i < projects.length; i++){
         let project = projects[i];
 
-        let nodeProject         = createNode("DIV", projectHTMLClassNames.project, null, null, null);
-        let nodeProjectInner    = createNode("DIV", projectHTMLClassNames.projectInner, null, null, {"background-image": project.backgroundImg});
-        let nodeProjectOverlay  = createNode("DIV", projectHTMLClassNames.projectOverlay, null, null, null);
-        let nodeProjectContent  = createNode("DIV", projectHTMLClassNames.projectContent, null, null, null);
-        let nodeProjectTop      = createNode("DIV", projectHTMLClassNames.projectTop, null, buildProjectTop(project.name, project.type), null);
-        let nodeProjectInfo     = createNode("DIV", projectHTMLClassNames.projectInfo, null, null, null);
-        let nodeProjectDate     = createNode("DIV", projectHTMLClassNames.projectDate, null, buildProjectTime(project.year, project.length), null);
-        let nodeProjectTechno   = createNode("DIV", projectHTMLClassNames.projectTechno, null, project.technology, null);
-        let nodeProjectDesc     = createNode("DIV", projectHTMLClassNames.projectDesc, null, project.shortDesc, null);
-        let nodeProjectLink     = createNodeLink(project.link);
-    
+        let nodeProject          = createNode("DIV", projectHTMLClassNames.project, null, null, null);
+        let nodeProjectInner     = createNode("DIV", projectHTMLClassNames.projectInner, null, null, {"background-image": project.backgroundImg});
+        let nodeProjectOverlay   = createNode("DIV", projectHTMLClassNames.projectOverlay, null, null, null);
+        let nodeProjectContent   = createNode("DIV", projectHTMLClassNames.projectContent, null, null, null);
+        let nodeProjectTop       = createNode("DIV", projectHTMLClassNames.projectTop, null, buildProjectTop(project.name, project.type), null);
+        let nodeProjectInfo      = createNode("DIV", projectHTMLClassNames.projectInfo, null, null, null);
+        let nodeProjectDate      = createNode("DIV", projectHTMLClassNames.projectDate, null, buildProjectTime(project.year, project.length), null);
+        let nodeProjectTechno    = createNode("DIV", projectHTMLClassNames.projectTechno, null, project.technology, null);
+        let nodeProjectDesc      = createNode("DIV", projectHTMLClassNames.projectDesc, null, project.shortDesc, null);
+        let nodeProjectLinks     = createNode("DIV", projectHTMLClassNames.projectLinks, null, null, null);
+        let nodeProjectLinksSub  = createNode("DIV", projectHTMLClassNames.projectLinksSub, null, null, null);
+            
         nodeProjectInfo = appendNodeToNode(nodeProjectDate, nodeProjectInfo);
         nodeProjectInfo = appendNodeToNode(nodeProjectTechno, nodeProjectInfo);
         nodeProjectInfo = appendNodeToNode(nodeProjectDesc, nodeProjectInfo);
 
+        if(project.linkDemo){
+            let nodeLinkDemo = createNodeLink(project.linkDemo, "Demo");
+            nodeProjectLinksSub = appendNodeToNode(nodeLinkDemo, nodeProjectLinksSub);
+        }
+        if(project.linkSourceCode){
+            let nodeSourceCode = createNodeLink(project.linkSourceCode, "Source code");
+            nodeProjectLinksSub = appendNodeToNode(nodeSourceCode, nodeProjectLinksSub);
+        }
+
+        nodeProjectLinks = appendNodeToNode(nodeProjectLinksSub, nodeProjectLinks);
+
         nodeProjectContent = appendNodeToNode(nodeProjectTop, nodeProjectContent);
         nodeProjectContent = appendNodeToNode(nodeProjectInfo, nodeProjectContent);
-        
+        nodeProjectContent = appendNodeToNode(nodeProjectLinks, nodeProjectContent);
 
-        nodeProjectLink = appendNodeToNode(nodeProjectInner, nodeProjectLink);
-        nodeProjectLink = appendNodeToNode(nodeProjectOverlay, nodeProjectLink);
-        nodeProjectLink = appendNodeToNode(nodeProjectContent, nodeProjectLink);
-
-        nodeProject = appendNodeToNode(nodeProjectLink, nodeProject);
+        nodeProject = appendNodeToNode(nodeProjectInner, nodeProject);
+        nodeProject = appendNodeToNode(nodeProjectOverlay, nodeProject);
+        nodeProject = appendNodeToNode(nodeProjectContent, nodeProject);
 
         document.getElementById("projects-container").appendChild(nodeProject);
     }

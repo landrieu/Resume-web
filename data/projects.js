@@ -1,13 +1,15 @@
 var projectHTMLClassNames = {
-    project:        "project",
-    projectInner:   "project-inner",
-    projectOverlay: "overlay overlay-project",
-    projectContent: "project-content",
-    projectTop:     "project-top",
-    projectInfo:    "project-info",
-    projectDate:    "project-date",
-    projectTechno:  "project-techno",
-    projectDesc:    "project-desc"
+    project:         "project",
+    projectInner:    "project-inner",
+    projectOverlay:  "overlay overlay-project",
+    projectContent:  "project-content",
+    projectTop:      "project-top",
+    projectInfo:     "project-info",
+    projectDate:     "project-date",
+    projectTechno:   "project-techno",
+    projectDesc:     "project-desc",
+    projectLinks:    "project-links",
+    projectLinksSub: "project-links-button-container"
 };
 
 var projects = [{
@@ -23,7 +25,8 @@ var projects = [{
     type:           "School project",
     status:         "",
     technology:     "Android, Java, Node JS, Mongo Db",
-    link:           "https://github.com/landrieu/Fitwise",
+    linkSourceCode: "https://github.com/landrieu/Fitwise",
+    linkDemo:       "",
     backgroundImg:  "url(img/fitwise_4.png)",
     year:           "2017"
 },{
@@ -39,7 +42,8 @@ var projects = [{
     type:           "Side project",
     status:         "",
     technology:     "Go, React JS",
-    link:           "https://github.com/landrieu/Guess-Capital",
+    linkSourceCode: "https://github.com/landrieu/Guess-Capital",
+    linkDemo:       "http://landrieu.cc/guess",
     backgroundImg:  "url(img/Countries_4.png)",
     year:           "2019"
 },{
@@ -55,7 +59,8 @@ var projects = [{
     type:           "Side project",
     status:         "",
     technology:     "Go, React JS, Canvas",
-    link:           "https://github.com/landrieu/Draw-Graph",
+    linkSourceCode: "https://github.com/landrieu/Draw-Graph",
+    linkDemo:       "http://landrieu.cc/currencies",
     backgroundImg:  "url(img/Coin_5.png)",
     year:           "2019"
 },{
@@ -71,7 +76,8 @@ var projects = [{
     type:           "Personal project",
     status:         "",
     technology:     "MongoDb, Angular 4, Node JS, JQuery",
-    link:           "https://github.com/landrieu/NMDb",
+    linkSourceCode: "https://github.com/landrieu/NMDb",
+    linkDemo:       "http://landrieu.cc/nmdb",
     backgroundImg:  "url(img/NMDb_1.png)",
     year:           "2017"
 },{
@@ -87,7 +93,8 @@ var projects = [{
     type:           "Personal project",
     status:         "",
     technology:     "C++, SFML",
-    link:           "https://github.com/landrieu/Pokemon-Map",
+    linkSourceCode: "https://github.com/landrieu/Pokemon-Map",
+    linkDemo:       "",
     backgroundImg:  "url(img/pokemon_map_1.png)",
     year:           "2017"
 },{
@@ -103,7 +110,8 @@ var projects = [{
     type:           "School project",
     status:         "",
     technology:     "C++, SFML",
-    link:           "https://github.com/landrieu/Pokemon-Fight-Mode",
+    linkSourceCode: "https://github.com/landrieu/Pokemon-Fight-Mode",
+    linkDemo:       "",
     backgroundImg:  "url(img/pokemon_fight_1.png)",
     year:           "2017"
 },{
@@ -119,7 +127,8 @@ var projects = [{
     type:           "Personal project",
     status:         "",
     technology:     "Node JS, EJS, Shell script, MongoDB",
-    link:           "",
+    linkSourceCode: "",
+    linkDemo:       "http://landrieu.cc/tracker",
     backgroundImg:  "url(img/track_flight_2.png)",
     year:           "2018"
 }/*,{
