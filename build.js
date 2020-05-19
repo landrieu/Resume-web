@@ -50,7 +50,9 @@ function createNode(tag, className, id, content, styles){
         node.className = className;
     }
     
-    node.innerHTML = content;
+    if(content){
+    	node.innerHTML = content;
+    }
 
     for(let k in styles){
         node.style[k] = styles[k];

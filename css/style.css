@@ -548,7 +548,10 @@ body{
     bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    width: 100%;	
     width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
     margin-bottom: 15px;
     transform: translate3d(100%,0,0);
     transition: all 500ms ease-in-out;
