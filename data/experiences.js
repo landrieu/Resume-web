@@ -21,7 +21,7 @@ var experiences = [{
     dateEnd: "2016/06/31",
     name: "ENSEA",
     shortDesc: "Master degree in computer science",
-    longDesc: "I studies during 2 years at the ENSEA (Ecole Nationale de l'Electronique et ses Applications). This university located near Paris, teaches mainly electronics and computer science. I had the opportunity to work on several projects that helped me to improve my abilities. <br /> <br /> <b>Graduated with a Master degree in computer science</b><br />",
+    longDesc: "I studied 2 years at the ENSEA (Ecole Nationale de l'Electronique et ses Applications). This university located near Paris, teaches mainly electronics and computer science. I had the opportunity to work on several projects that helped me to improve my abilities. <br /> <br /> <b>Graduated with a Master degree in computer science</b><br />",
     logo: "https://www.ensea.fr/sites/all/themes/custom/customer/logo.png",
     smallLogo: "",
     color: "#b10044",
