@@ -76,12 +76,19 @@ function createNodeLink(href, innerHTML){
     return node;
 }
 
-function createImgNodeExperience(src, className, id){
+function createImgNodeExperience(src, className, id, alt){
     var img = document.createElement("IMG");        
 
     img.src       = src;
-    img.className = className;
-    img.id        = id;
+    img.alt       = alt;
+
+    if(className){
+       img.className = className;
+    }
+    
+    if(id){
+       img.id        = id;
+    }
 
     return img;
 }
@@ -273,7 +280,7 @@ function insertExperienceInformations(){
         let nodeDetail         = createNode("DIV", experienceHTMLClassNames.experienceDetail, null, null, {"backgroundColor": "#fff", "color": "rgb(51, 51, 51)"});
         
         let nodeLink = createNodeLink(event.link, event.link);
-        let nodeImg  = createImgNodeExperience(event.logo, null, null);
+        let nodeImg  = createImgNodeExperience(event.logo, null, null, event.alt);
 
         nodeInfoBox = appendNodeToNode(nodeDates, nodeInfoBox);
         nodeInfoBox = appendNodeToNode(nodeLocation, nodeInfoBox);

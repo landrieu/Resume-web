@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -7,11 +7,12 @@
   <meta name="author" content="Lionel Andrieu">
   <meta name="description" content="Resume web of Lionel Andrieu. Contains experiences, skills, projects. Created in 2020">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
+  <meta property='og:type'  content="website"/>
   <meta property='og:title' content="Web resume - Lionel Andrieu"/>
-  <meta property='og:image' content="//www.landrieu.cc/img/linkedin_thumbnail.png"/>
+  <meta property='og:image' content="https://www.landrieu.cc/img/linkedin_thumbnail.png"/>
   <meta property='og:description' content="Web resume and portfolio. It contains my experiences, skills, projects I developed and my PDF resume."/>
-  <meta property='og:url' content="//www.landrieu.cc"/>
+  <meta property='og:url' content="https://www.landrieu.cc"/>
 
   <link rel="canonical" href="https://landrieu.cc/">
   <link href="css/style.css" rel="stylesheet">
@@ -22,6 +23,23 @@
 
   <script src="script.js"></script>
   <script src="build.js"></script>
+
+  <script type="application/ld+json">
+  {
+   "@context": "http://schema.org",
+   "@type": "Organization",
+   "name": "Andrieu",
+   "url": "https://www.landrieu.cc",
+   "sameAs": [
+      "https://www.linkedin.com/in/lionel-andrieu"
+   ],
+   "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+61-449-680-142",
+      "contactType": "customer service"
+   }]
+  }
+  </script>
 </head>
 
 <body>
@@ -49,11 +67,11 @@
             </div>
             <div id="contact-info">
               <ul>
-                <li><div class="icon-container"><img src="icon/email-icon.svg"></div><a href="mailto:lionel.andrieu@gmail.com">lionel.andrieu@gmail.com</a></li>
-                <li><div class="icon-container"><img src="icon/phone-icon.svg"></div><a href="tel:+61449-680-142">+61 449-680-142</a></li>
-                <li><div class="icon-container"><img src="icon/github-icon.svg"></div><a href="http://github.com/landrieu" target="_blank">github.com/landrieu</a></li>
-                <li><div class="icon-container"><img src="icon/linkedin-icon.svg"></div><a href="http://linkedin.com/in/lionel-andrieu" target="_blank">linkedin.com/in/lionel-andrieu</a></li>
-                <li><div class="icon-container"><img src="icon/location-icon.svg"></div><a href="https://www.google.com/maps/place/Sydney+NSW" target="_blank">Sydney</a></li>
+                <li><div class="icon-container"><img src="icon/email-icon.svg" alt="Email icon"></div><a href="mailto:lionel.andrieu@gmail.com">lionel.andrieu@gmail.com</a></li>
+                <li><div class="icon-container"><img src="icon/phone-icon.svg" alt="Phone icon"></div><a href="tel:+61449-680-142">+61 449-680-142</a></li>
+                <li><div class="icon-container"><img src="icon/github-icon.svg" alt="Github icon"></div><a href="http://github.com/landrieu" target="_blank">github.com/landrieu</a></li>
+                <li><div class="icon-container"><img src="icon/linkedin-icon.svg" alt="LinkedIn icon"></div><a href="http://linkedin.com/in/lionel-andrieu" target="_blank">linkedin.com/in/lionel-andrieu</a></li>
+                <li><div class="icon-container"><img src="icon/location-icon.svg" alt="Location icon"></div><a href="https://www.google.com/maps/place/Sydney+NSW" target="_blank">Sydney</a></li>
               </ul>
             </div>
           </div>
@@ -111,7 +129,7 @@ Recently I have been learning Golang and GraphQL.
   <div class="section" id="section-6" section-name="Other">
     <div class="section-sub" id="section-sub-5">
       <div id="button-container">
-        <a href="resume/CV_-_Lionel_Andrieu.pdf" target="_blank">Download resume</a>
+        <a href="resume/CV-LionelAndrieu.pdf" target="_blank">Download resume</a>
       </div>
     </div>
   </div>
