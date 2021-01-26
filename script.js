@@ -94,7 +94,7 @@ function buildIndicator(){
     for (var i = 0; i < sectionsElements.length; i++) {
         let nodeRound       = createDivNode("round-indicator-" + i,"round-indicator", i, null);
         let nodeContainer   = createDivNode(null, "round-indicator-container", null, null);
-        let nodeTitle       = createDivNode(null, "menu-title", null, sectionsElements[i].getAttribute("section-name"));
+        let nodeTitle       = createDivNode(null, "menu-title", null, sectionsElements[i].getAttribute("section-name"), "H2");
         let nodeMenuSection = createDivNode("menu-section-" + i, "menu-section", i, null);
 
         nodeContainer.appendChild(nodeRound);
@@ -106,8 +106,8 @@ function buildIndicator(){
     }
 }
 
-function createDivNode(id, className, number, content){
-  var node = document.createElement("DIV");        
+function createDivNode(id, className, number, content, type){
+  var node = document.createElement(type || "DIV");        
 
   if(id){
      node.id = id
