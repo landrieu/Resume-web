@@ -509,7 +509,7 @@ body {
 
 .overlay-project {
     background-color: #3d4671;
-    opacity: 0.6;
+    opacity: 0.2;
     transition: opacity 500ms ease-in-out;
 }
 
@@ -545,6 +545,8 @@ body {
 }
 
 .project-top {
+    transform: translate3d(-100%, 0, 0);
+    transition: all 500ms ease-in-out;
     font-size: 1.4rem;
     white-space: nowrap;
     overflow: hidden;
@@ -554,6 +556,11 @@ body {
 .project-info {
     transform: translate3d(100%, 0, 0);
     transition: all 500ms ease-in-out;
+}
+
+.project:hover .project-top,
+.project:active .project-top{
+    transform: translate3d(0, 0, 0);
 }
 
 .project:hover .project-info,
@@ -925,7 +932,7 @@ body {
 
 @media only screen and (max-width: 400px) {
     html {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     html #menu {
@@ -1045,6 +1052,8 @@ body {
 
     .project {
         width: -webkit-fill-available;
-        height: 190px;
+        height: 205px;
+        width: 100%;
+        margin: 5px auto;
     }
 }
