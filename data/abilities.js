@@ -32,22 +32,22 @@ var abilities = {
             rate: 4.5,
             comment: "I learned it with HTML, I have a strong understanding."
         },{
-            name: "Less",
+            name: "Sass",
             rate: 4.5,
             comment: "Used it during my internship at Option Way."
         },{
             name: "Bootstrap",
             rate: 4.5,
             comment: "I used Bootstrap on different projects."
-        },{
+        },/*{
             name: "JSON",
             rate: 4.5,
             comment: "Good understanding, I built many REST APIs, exchanging data in JSON format."
-        },{
+        },*/{
             name: "Canvas",
             rate: 4,
             comment: "I learned Canvas recently. I developed a side project to draw line graphs from scratch."
-        },{
+        },/*{
             name: "MVC Pattern",
             rate: 4.5,
             comment: "Good understanding in this pattern, which is indispensable to use front-end framework."
@@ -55,9 +55,9 @@ var abilities = {
             name: "REST",
             rate: 4.5,
             comment: "I have a strong understanding in REST API. I implemented this kind of architecture for many personal projects."
-        },{
+        },*/{
             name: "GraphQL",
-            rate: 2,
+            rate: 4,
             comment: "I understand and used GraphQL approach for one of my personal project."
         },{
             name: "Node JS",
@@ -69,19 +69,23 @@ var abilities = {
             comment: "I used EJS for three personal projects, which is very convenient to build light website with Node JS."
         },{
             name: "Angular 2/4",
-            rate: 4,
+            rate: 3,
             comment: "I used Angular 2/4 across school and personal projects, which is my favorite framework to develop web application."
         },{
             name: "React JS",
-            rate: 2.5,
+            rate: 4.5,
             comment: "I have a strong interest in React JS despite I learned recently how to use it."
         },{
             name: "Ember JS",
             rate: 4,
             comment: "I developed a website with Ember JS for Option Way."
         },{
-            name: "MongoDb",
+            name: "Redux",
             rate: 4,
+            comment: "I have been using MongoDb on most of my projects. "
+        },{
+            name: "MongoDb",
+            rate: 4.5,
             comment: "I have been using MongoDb on most of my projects. "
         },{
             name: "MySQL",
