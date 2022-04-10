@@ -5,15 +5,15 @@ function Location(city, region, country) {
 }
 
 var experienceHTMLClassNames = {
-    experienceDetail:                   "experience-detail",
-    experienceDetailPhoto:              "experience-detail-photo",
-    experienceDetailPhotoContainer:     "experience-detail-photo-container",
-    experienceDetailInformation:        "experience-detail-information",
-    experienceDetailName:               "experience-detail-name",
-    experienceDetailInformationBox:     "experience-detail-information-box",
-    experienceDetailDates:              "experience-detail-dates",
-    experienceDetailLocation:           "experience-detail-location",
-    experienceDetailLongDesc:           "experience-detail-long-desc"
+    experienceDetail: "experience-detail",
+    experienceDetailPhoto: "experience-detail-photo",
+    experienceDetailPhotoContainer: "experience-detail-photo-container",
+    experienceDetailInformation: "experience-detail-information",
+    experienceDetailName: "experience-detail-name",
+    experienceDetailInformationBox: "experience-detail-information-box",
+    experienceDetailDates: "experience-detail-dates",
+    experienceDetailLocation: "experience-detail-location",
+    experienceDetailLongDesc: "experience-detail-long-desc"
 };
 
 var experiences = [{
@@ -30,7 +30,7 @@ var experiences = [{
     degreeName: "Master in Computer Science",
     location: new Location("Cergy", "", "France"),
     link: "https://www.ensea.fr/en"
-},{
+}, {
     dateStart: "2016/09/01",
     dateEnd: "2017/04/30",
     name: "University of Western Ontario",
@@ -44,7 +44,7 @@ var experiences = [{
     degreeName: "",
     location: new Location("London", "ON", "Canada"),
     link: "https://www.uwo.ca"
-},{
+}, {
     dateStart: "2017/05/01",
     dateEnd: "2017/11/31",
     name: "Option Way",
@@ -57,7 +57,7 @@ var experiences = [{
     type: "Front-end developer",
     location: new Location("Nice", "", "France"),
     link: "https://web.optionway.com"
-},{
+}, {
     dateStart: "2018/01/01",
     dateEnd: "2018/02/28",
     name: "Esker",
@@ -70,7 +70,7 @@ var experiences = [{
     type: "Professional service",
     location: new Location("Lyon", "", "France"),
     link: "https://www.esker.com"
-},{
+}, {
     dateStart: "2018/03/01",
     dateEnd: "2020/08/31",
     name: "Esker",
@@ -83,4 +83,20 @@ var experiences = [{
     type: "Professional service",
     location: new Location("Sydney", "NSW", "Australia"),
     link: "https://www.esker.com.au"
+}, {
+    dateStart: "2021/03/01",
+    name: "Onepoint",
+    shortDesc: "",
+    longDesc: `I am working as a software engineer for onepoint. So far, I have been involved on two projects. 
+        <ul>
+            <li><b>M1:</b> Worked on the mobile application, that allows user to consult their consumption and update their plan. Developed with React Native.</li>
+            <li><b>FWD:</b> Developed Elite Studio platform from scratch. Integrated a Headless CMS (ContentStack), implemented with NextJS, GraphQL and material UI</li>
+        </ul>`,
+    logo: "https://www.groupeonepoint.com/wp-content/uploads/2020/10/logo-onepoint.png",
+    alt: "Logo Onepoint",
+    smallLogo: "",
+    color: "#ed1a37",
+    type: "Software engineer",
+    location: new Location("Sydney", "NSW", "Australia"),
+    link: "https://www.groupeonepoint.com/en-au"
 }];
